@@ -6,12 +6,11 @@
 /*   By: knomura <knomura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 01:16:02 by knomura           #+#    #+#             */
-/*   Updated: 2025/05/28 04:02:00 by knomura          ###   ########.fr       */
+/*   Updated: 2025/06/01 17:19:34 by knomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
 
 size_t	ft_strlen(const	char *s)
 {
@@ -86,24 +85,24 @@ char	*ft_strdup(const char *s1)
 	return (dest);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*dest;
-	size_t	i;
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	char	*dest;
+// 	size_t	i;
 
-	if (!s || start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
-	dest = malloc(len + 1);
-	if (!dest)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
-	{
-		dest[i] = s[start + i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+// 	if (!s || start >= ft_strlen(s))
+// 		return (ft_strdup(""));
+// 	if (len > ft_strlen(s) - start)
+// 		len = ft_strlen(s) - start;
+// 	dest = malloc(len + 1);
+// 	if (!dest)
+// 		return (NULL);
+// 	i = 0;
+// 	while (i < len && s[start + i])
+// 	{
+// 		dest[i] = s[start + i];
+// 		i++;
+// 	}
+// 	dest[i] = '\0';
+// 	return (dest);
+// }
