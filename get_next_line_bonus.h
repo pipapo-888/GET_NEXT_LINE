@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knomura <knomura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 01:15:57 by knomura           #+#    #+#             */
-/*   Updated: 2025/06/02 16:42:29 by knomura          ###   ########.fr       */
+/*   Updated: 2025/06/02 17:08:58 by knomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000000
+#  define BUFFER_SIZE 3
+# endif
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
 # endif
 
 # include <stdlib.h>
