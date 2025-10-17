@@ -6,7 +6,7 @@
 /*   By: knomura <knomura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 01:16:00 by knomura           #+#    #+#             */
-/*   Updated: 2025/06/02 17:04:34 by knomura          ###   ########.fr       */
+/*   Updated: 2025/10/17 16:06:31 by knomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*clean_stash(char *stash)
 		return (NULL);
 	}
 	i++;
-	new_stash = malloc(ft_strlen(stash + i) + 1);
+	new_stash = malloc(ft_gnl_strlen(stash + i) + 1);
 	if (!new_stash)
 		return (NULL);
 	j = 0;
@@ -76,14 +76,14 @@ char	*read_and_stash(int fd, char *stash)
 	buf = malloc(BUFFER_SIZE + 1);
 	if (!buf)
 		return (NULL);
-	while ((ft_strchr(stash, '\n') == NULL) && bytes_read != 0)
+	while ((ft_gnl_strchr(stash, '\n') == NULL) && bytes_read != 0)
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 		if (bytes_read == -1)
 			return (free(buf), NULL);
 		buf[bytes_read] = '\0';
 		tmp = stash;
-		stash = ft_strjoin(stash, buf);
+		stash = ft_gnl_strjoin(stash, buf);
 		free(tmp);
 		if (!stash)
 			return (free(buf), NULL);
@@ -100,7 +100,7 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, NULL, 0) < 0)
 		return (free(stash), stash = NULL, NULL);
 	if (stash == NULL)
-		stash = ft_strdup("");
+		stash = ft_gnl_strdup("");
 	stash = read_and_stash(fd, stash);
 	if (stash == NULL)
 		return (NULL);

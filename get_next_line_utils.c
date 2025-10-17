@@ -6,13 +6,13 @@
 /*   By: knomura <knomura@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 01:16:02 by knomura           #+#    #+#             */
-/*   Updated: 2025/06/02 17:15:17 by knomura          ###   ########.fr       */
+/*   Updated: 2025/10/17 16:05:43 by knomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const	char *s)
+size_t	ft_gnl_strlen(const	char *s)
 {
 	size_t	len;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const	char *s)
 	return (len);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_gnl_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;
 	int		i;
@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	dest = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	dest = malloc(ft_gnl_strlen(s1) + ft_gnl_strlen(s2) + 1);
 	if (!dest)
 		return (NULL);
 	i = 0;
@@ -49,7 +49,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (dest);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_gnl_strchr(const char *s, int c)
 {
 	int	i;
 
@@ -65,13 +65,13 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strdup(const char *s1)
+char	*ft_gnl_strdup(const char *s1)
 {
 	char	*dest;
 	size_t	len;
 	size_t	i;
 
-	len = ft_strlen(s1);
+	len = ft_gnl_strlen(s1);
 	dest = malloc(len + 1);
 	if (!dest)
 		return (NULL);
