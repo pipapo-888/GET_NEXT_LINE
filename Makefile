@@ -11,7 +11,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
